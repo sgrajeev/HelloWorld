@@ -1,0 +1,3974 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass revtex4-1
+\begin_preamble
+
+
+
+\usepackage[usenames,dvipsnames]{xcolor}
+
+
+
+
+
+
+
+
+\pagenumbering{arabic}
+\end_preamble
+\options notitlepage,tightenlines,eqsecnum,floats,aps,amsmath,amssymb,nofootinbib,prd,shownopacs
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding iso8859-15
+\fontencoding default
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref true
+\pdf_bookmarks false
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref section
+\pdf_pdfusetitle false
+\pdf_quoted_options "linkcolor=blue,urlcolor=black,citecolor=blue"
+\papersize default
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 2
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle plain
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+A dual to the principal chiral model as a toy model for strongly coupled
+ 
+\begin_inset Formula $\lambda\phi^{4}$
+\end_inset
+
+ theory
+\end_layout
+
+\begin_layout Abstract
+We consider a two dimensional scalar field theory with a nilpotent current
+ algebra, which is dual to the Principal Chiral Model.
+ The quantum theory is renormalizable and not asymptotically free: the theory
+ is strongly coupled at short distances (encountering a Landau pole).
+ We suggest it can serve as a toy model for 
+\begin_inset Formula $\lambda\phi^{4}$
+\end_inset
+
+ theory in four dimensions, just as the principal chiral model is a useful
+ toy model for Yang-Mills theory.
+ We find some classical wave solutions that survive the strong coupling
+ limit and quantize them by the collective variable method.
+ They describe excitations with an unusual dispersion relation 
+\begin_inset Formula $\omega\propto|k|^{\frac{1}{3}}$
+\end_inset
+
+ .
+ Perhaps they are the ``preons'' at strong coupling whose bound states form
+ massless particles over long distances.
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+We study the field theory 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Nappi,CurtrightZachos"
+
+\end_inset
+
+ with equations of motion
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\ddot{\phi}=\lambda\left[\dot{\phi},\phi'\right]+\phi'',\label{eq:FieldEqn}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\phi$
+\end_inset
+
+ is valued in a Lie algebra, 
+\begin_inset Formula $\phi:\mathbb{R}^{1,1}\to\underline{SU}(2)$
+\end_inset
+
+.
+ This follows from the action
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+S_{1}\equiv\int\mathcal{L}_{1}dxdt=\int\mathrm{Tr}\left\{ \frac{1}{2\lambda}\dot{\phi}^{2}-\frac{1}{2\lambda}\phi'^{2}+\frac{1}{3}\phi[\dot{\phi},\phi']\right\} dxdt.\label{eq:s1}
+\end{equation}
+
+\end_inset
+
+In the 
+\begin_inset Formula $\lambda\rightarrow0$
+\end_inset
+
+ limit, these equations admit linear wave solutions.
+ But in the high-coupling regime, the theory is dominated by nonlinear effects.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S_{1}$
+\end_inset
+
+ is closely tied to other models and subjects, which we elaborate on in
+ section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:relations"
+
+\end_inset
+
+.
+ These include the study of slow light, the Wess-Zumino-Witten (WZW) model,
+ and the mathematical theory of hypoelliptic operators.
+ Of particular interest in this paper, the model described by 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+ is also classically dual to the well-studied principal chiral model, described
+ by the action
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S_{2}=\int\mathcal{L}_{2}dxdt=\frac{1}{2f}\int\mathrm{Tr}\ \left\{ \left(g^{-1}\dot{g}\right)^{2}-c^{2}\left(g^{-1}g'\right)^{2}\right\} dxdt
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $g:\mathbb{R}^{1,1}\to SU(2)$
+\end_inset
+
+.
+ This is a special case of the nonlinear sigma model, with target space
+ 
+\begin_inset Formula $\underline{SU}(2)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Despite their classical equivalence, 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $S_{2}$
+\end_inset
+
+ lead to entirely different quantum theories.
+ 
+\begin_inset Formula $S_{2}$
+\end_inset
+
+ gives an asymptotically free theory: at short distances 
+\begin_inset Formula $f\to0$
+\end_inset
+
+, giving us free massless excitations.
+ But the true particles that survive to long distances are bound states
+ of non-zero mass
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PCM"
+
+\end_inset
+
+.
+ For this reason, the principal chiral model is often used as a toy model
+ for 4-dimensional Yang-Mills theory, notorious in for its mathematical
+ complexity.
+ Not only do the two theories share similar short-distance behavior, but
+ the mass gap in the principal chiral model has served as a proof of concept
+ for the conjectured (and well-supported) mass gap in Yang-Mills.
+ (Even though neither case has a mathematically rigorous proof, yet.)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S_{1}$
+\end_inset
+
+, on the other hand, leads to a renormalizable but not asymptotically free
+ quantum theory.
+ At short distances the coupling constant 
+\begin_inset Formula $\lambda\to\infty$
+\end_inset
+
+, while at long distances we have weakly nonlinear massless excitations.
+ It makes sense to use 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+ as a 2-D toy model for strongly coupled theories, in particular 4-dimensional
+ 
+\begin_inset Formula $\lambda\phi^{4}$
+\end_inset
+
+ theory
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+that is, pure 
+\begin_inset Formula $\lambda\phi^{4}$
+\end_inset
+
+ theory, describing a Higgs-like particle with no coupling to fermions
+\end_layout
+
+\end_inset
+
+.
+ The behavior of quantum field theories at high coupling is notoriously
+ intractable, and the physical meaning of  such theories is still up for
+ debate.
+ For this reason, it is still necessary to search for simple examples of
+ such theories and try to gleam what meaning, if any, they have in the short
+ distance limit.
+\end_layout
+
+\begin_layout Standard
+In addition to sharing short-distance behavior, both the 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+ model and 
+\begin_inset Formula $\lambda\phi^{4}$
+\end_inset
+
+ theory can be recast as quadratic hamiltonians with a step-3 nilpotent
+ bracket algebra, suggesting some algebraic structure in common (appendix
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Appendix:nilpotent"
+
+\end_inset
+
+ discusses nilpotent algebra).
+ The 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+ model's relative simplicity makes it a good candidate for attempting to
+ probe the high coupling regime of field theories in general, but the connection
+ to 
+\begin_inset Formula $\lambda\phi^{4}$
+\end_inset
+
+ theory seems the closest.
+ Additionaly, its classical duality to the principal chiral model motivates
+ a juxtaposition of the two theories in the classical and quantum cases.
+ 
+\end_layout
+
+\begin_layout Standard
+To glimpse what becomes of our theory in the high coupling limit, we take
+ the modest approach of finding nonlinear wave-type solutions to the classical
+ model which survive the 
+\begin_inset Formula $\lambda\rightarrow\infty$
+\end_inset
+
+ limit (section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Reduction-mech"
+
+\end_inset
+
+).
+ This set of solutions defines a mechanical system or 
+\begin_inset Quotes eld
+\end_inset
+
+reduced system
+\begin_inset Quotes erd
+\end_inset
+
+ in each of the dual models.
+ While they physically appear very different, the resulting classical solutions
+ can be mapped from one system to another.
+ We quantize these collective variables to determine their dispersion relation
+ (section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:reduced_system_quant"
+
+\end_inset
+
+) in the short distance limit for each theory.
+ We have in mind the sine-Gordon theory, whose solitons turns out to be
+ the fundamental constituents which bind to form the scalar particles
+\begin_inset CommandInset citation
+LatexCommand cite
+key "sineGordon,QuantThSolitons"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+These reduced quantum theories yield two different results.
+ In particular, the reduced model of 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+ has an exotic dispersion relation in the short distance limit.
+ We postulate that its spectrum may hint at the fundamental constituents
+ of the highly coupled theory, which need not behave like traditional particles
+ at all.
+ In section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Conclusion-and-future"
+
+\end_inset
+
+ we offer concluding remarks and a side-by-side comparison of our work with
+ 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $S_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+On The Notation
+\end_layout
+
+\begin_layout Standard
+We regard 
+\begin_inset Formula $\phi=\frac{1}{2i}\left[\phi_{1}\sigma_{1}+\phi_{2}\sigma_{2}+\phi_{3}\sigma_{3}\right]=\frac{1}{2i}\boldsymbol{\phi}\cdot\boldsymbol{\sigma}$
+\end_inset
+
+ as a traceless anti-hermitian matrix.
+ Recall then that the commutator and cross product are related by
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+[X,Y]=\frac{1}{2i}\left(\mathbf{X}\times\mathbf{Y}\right)\cdot\boldsymbol{\sigma}.
+\]
+
+\end_inset
+
+Also, we define 
+\begin_inset Formula $\mathrm{Tr}X\equiv-2\mathrm{tr}X$
+\end_inset
+
+ so that 
+\begin_inset Formula 
+\[
+\mathrm{Tr}\phi^{2}=\phi_{1}^{2}+\phi_{2}^{2}+\phi_{3}^{2}.
+\]
+
+\end_inset
+
+In relativistically invariant notation, (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:FieldEqn"
+
+\end_inset
+
+) and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:s1"
+
+\end_inset
+
+) can be written as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\partial^{\mu}\partial_{\mu}\phi_{a}-\frac{\lambda}{2}\ \epsilon_{abc}\epsilon^{\mu\nu}\partial_{\mu}\phi^{b}\partial_{\nu}\phi^{c}=0,
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S_{1}=\frac{1}{2\lambda}\int\partial_{\mu}\phi^{a}\partial_{\nu}\phi^{a}\eta^{\mu\nu}d^{2}x+\frac{1}{6}\int\epsilon_{abc}\phi^{a}\partial_{\mu}\phi^{b}\partial_{\nu}\phi^{c}\epsilon^{\mu\nu}d^{2}x
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\mu,\nu=0,1$
+\end_inset
+
+ and 
+\begin_inset Formula $a,b,c=1,2,3$
+\end_inset
+
+ ; also, 
+\begin_inset Formula $\epsilon^{\mu\nu},\epsilon_{abc}$
+\end_inset
+
+ are the Levi-Civita tensors.
+ This is a particular case of the general sigma model studied in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SigmaModelString"
+
+\end_inset
+
+ as the background of string theory, with a flat metric on the target space
+ and a constant 3-form field 
+\begin_inset Formula $\epsilon_{abc}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+relation to other models 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:relations"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+The 
+\begin_inset Formula $c\rightarrow0$
+\end_inset
+
+ Limit and Slow Light
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Relation-to-Slow"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Consider the equations of motion (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:FieldEqn"
+
+\end_inset
+
+) where the speed of linear propagation at low coupling is taken to be 
+\begin_inset Formula $c$
+\end_inset
+
+ rather than 1: 
+\begin_inset Formula 
+\begin{equation}
+\ddot{\phi}=\lambda\left[\dot{\phi},\phi'\right]+c^{2}\phi''.\label{eq:field_eqn_c}
+\end{equation}
+
+\end_inset
+
+If we rescale 
+\begin_inset Formula $\phi\to\lambda^{a}\phi$
+\end_inset
+
+, 
+\begin_inset Formula $t\to\lambda^{b}t$
+\end_inset
+
+, this becomes 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lambda^{a-2b}\ddot{\phi}=\lambda^{1+2a-b}\dot{\phi}\times\phi'+c^{2}\lambda^{a}\phi''.
+\]
+
+\end_inset
+
+Set 
+\begin_inset Formula $a=2b$
+\end_inset
+
+ and 
+\begin_inset Formula $1+2a=b$
+\end_inset
+
+ to get
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\ddot{\phi}=\dot{\phi}\times\phi'+c^{2}\lambda^{-\frac{2}{3}}\phi''.
+\]
+
+\end_inset
+
+Thus the strong coupling limit 
+\begin_inset Formula $\lambda\to\infty$
+\end_inset
+
+ at fixed 
+\begin_inset Formula $c$
+\end_inset
+
+ is equivalent to the limit 
+\begin_inset Formula $c\to0$
+\end_inset
+
+ with 
+\begin_inset Formula $\lambda=1.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\ddot{\phi}=\dot{\phi}\times\phi'.\label{eq:StrongCouplingEqn}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The strongly coupled limit can be thought of as the limit in which the waves
+ move very slowly.
+ It has been noted in that literature 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SlowLight"
+
+\end_inset
+
+ that when the speed of light in a medium is small, nonlinear effects are
+ magnified.
+ Although the specific equations appearing there are different, it is possible
+ that the solutions of the sort we study are of interest in that context
+ as well.
+\end_layout
+
+\begin_layout Standard
+From a field theoretic context, the equivalence of these limits seems troubling.
+ At short distances, the highly-coupled theory will not be relativistic.
+ It is a sort of 
+\begin_inset Quotes eld
+\end_inset
+
+post-relativistic
+\begin_inset Quotes erd
+\end_inset
+
+ regime, where 
+\begin_inset Formula $c\rightarrow0$
+\end_inset
+
+.
+ This is much the opposite of the case in the theory of 
+\begin_inset Formula $S_{2}$
+\end_inset
+
+, where a mass gap means that the particles which survive to long distances
+ are massive; they can be non-relativistic in the traditional 
+\begin_inset Formula $c\rightarrow\infty$
+\end_inset
+
+ sense.
+ Perhaps some such exotic excitations at high coupling are in fact the fundament
+al constituents, forming as bound states the ordinary massless particles
+ which appear in the long distance limit.
+ As we know from the quark model, the short distance excitations do not
+ need to be particles in the usual sense; they could be confined.
+ In any case, it is important what solutions might survive the high coupling
+ limit, whether they be unphysical or simply unintuitive.
+\end_layout
+
+\begin_layout Standard
+We will see an example of wave solutions which classically survive the 
+\begin_inset Formula $c\rightarrow0$
+\end_inset
+
+ limit, continuing to propagate through nonlinearity alone.
+ Since the energy density is constant, these solutions do not violate causality:
+ they are analogous to the Continuous Wave solutions in a medium where the
+ phase velocity is greater than 
+\begin_inset Formula $c$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsection
+Sub-Riemannian Geometry and the Hormander Condition
+\end_layout
+
+\begin_layout Standard
+The orbits of many mechanical systems can be thought of as geodesics in
+ some appropriate Riemannian manifold.
+ In the limit of strong coupling, this metric degenerates and can become
+ sub-Riemannian.
+ That is, the contravariant metric tensor has some zero eigenvalues so that
+ it can be written as 
+\begin_inset Formula $\sum_{j}X_{j}\otimes X_{j}$
+\end_inset
+
+ for some vector fields 
+\begin_inset Formula $X_{j}$
+\end_inset
+
+ whose linear span may be smaller than the tangent space.
+ If these vector fields satisfy the Hormander condition (i.e.,
+\begin_inset Formula $X_{j}$
+\end_inset
+
+ along with their repeated commutators span the tangent spaces at every
+ point) there still are geodesics connecting every pair of sufficiently
+ close points (Chow-Rashevskii theorem)
+\begin_inset CommandInset citation
+LatexCommand cite
+key "subRiemannian"
+
+\end_inset
+
+.
+ This geometry came to the notice of many physicists as a model for self-propuls
+ion of amoeba
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ShapereWilczek"
+
+\end_inset
+
+.
+ It has its roots in Carnot-Caratheodory geometric formalism of thermodynamics
+ and in control theory.
+ Hormander
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hormander"
+
+\end_inset
+
+ discovered independently that the same criterion is sufficient for the
+ subRiemannian Laplace operator 
+\begin_inset Formula $\Delta=\sum_{j}X_{j}^{2}$
+\end_inset
+
+ to be hypoelliptic: the solution 
+\begin_inset Formula $f$
+\end_inset
+
+ to the inhomogenous equation 
+\begin_inset Formula $Lf=u$
+\end_inset
+
+ is smooth whenever the source 
+\begin_inset Formula $u$
+\end_inset
+
+ is smooth.
+ This can be thought of the quantum version of the above condition on subgeodesi
+c connectivity: the subRiemannian Laplacian is the quantum hamiltonian of
+ a system whose orbits are subRiemannian geodesics.
+\end_layout
+
+\begin_layout Standard
+Understanding the strong coupling limit of quantum field theories is a central
+ problem of modern theoretical physics.
+ It would be nice to have a geometric formulation analogous to the above
+ for quantum field theories: seek an infinite dimensional subRiemannian
+ manifold whose geodesics are the solutions of the strong coupled limit
+ of the classical field theory.
+ The subRiemannian Laplacian would be the quantum hamiltonian of this limit.
+ This paper presents the simplest example of such a field theory.
+ 
+\end_layout
+
+\begin_layout Standard
+Since we are trying to minimize the mathematical content in this paper,
+ we will not elaborate further on this point, although it underlies everything(s
+ee the Appendix for a bit more detail).
+ For example, the reduction to the mechanical system below yields a finite
+ dimensional system satisfying the Hormader criterion in the limit 
+\begin_inset Formula $\lambda\to\infty$
+\end_inset
+
+.
+ Its quantum hamiltonian (in the limit 
+\begin_inset Formula $\lambda\to\infty$
+\end_inset
+
+ taken as in the previous section) is a hypoelliptic operator, an of Hormander's
+ theory.We hope to apply this idea to other challenging strongly coupled
+ field theories of physics (e.g., fluid mechanics).
+\end_layout
+
+\begin_layout Subsection
+Relation to the WZW model 
+\end_layout
+
+\begin_layout Standard
+We can also regard our equations as a limiting case of the Wess-Zumino-Witten
+ model
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Witten's Tr is our tr.
+ His 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is our 
+\begin_inset Formula $\lambda_{1}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Witten"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S_{WZW}=\frac{1}{4\lambda_{1}^{2}}\int\mathrm{tr}\ \partial^{\mu}g\partial_{\mu}g^{-1}d^{2}x+\frac{n}{24\pi}\int_{M_{3}}\mathrm{tr}\ (g^{-1}dg)^{3}
+\]
+
+\end_inset
+
+as 
+\begin_inset Formula $n\to\infty$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda_{1}\to0$
+\end_inset
+
+, keeping 
+\begin_inset Formula $\lambda=\lambda_{1}^{2}\left(n/2\pi\right)^{\frac{2}{3}}$
+\end_inset
+
+ fixed
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Here, 
+\begin_inset Formula $M_{3}$
+\end_inset
+
+ is a 3-manifold of which the two-dimensional space-time is the boundary.
+ We do not require 
+\begin_inset Formula $\lambda_{1}^{2}$
+\end_inset
+
+ to take the conformally invariant value 
+\begin_inset Formula $\frac{4\pi}{n}$
+\end_inset
+
+ .
+\end_layout
+
+\end_inset
+
+.
+ To see this, let 
+\begin_inset Formula $g(x)=e^{bi\sigma_{a}\phi^{a}(x)}$
+\end_inset
+
+ and expand in powers of 
+\begin_inset Formula $b$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S_{WZW}=\frac{b^{2}}{2\lambda_{1}^{2}}\int\partial^{\mu}\phi^{a}\partial_{\mu}\phi^{a}+\frac{n}{24\pi}b^{3}\int_{M_{3}}2\epsilon_{abc}\ d\phi^{a}d\phi^{b}d\phi^{c}\ +\cdots
+\]
+
+\end_inset
+
+To this order the WZW term is an exact differential, so we can write it
+ as an integral over space-time
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S_{WZW}=\frac{1}{2}\frac{b^{2}}{\lambda_{1}^{2}}\int\partial^{\mu}\phi^{a}\partial_{\mu}\phi^{a}+\frac{n}{12\pi}b^{3}\int\epsilon_{abc}\ \phi^{a}d\phi^{b}d\phi^{c}\ +\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S_{WZW}$
+\end_inset
+
+ reduces to 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+ if we identify 
+\begin_inset Formula $b^{3}=2\pi/n$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ as above.
+ By taking this limit, we can easily get the renormalization of our model.
+ Recall that 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Witten"
+
+\end_inset
+
+ the one loop renormalization group equation of the 
+\begin_inset Formula $O(N)$
+\end_inset
+
+ WZW model is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{d\lambda_{1}^{2}}{d\log\Lambda}=-\frac{\lambda_{1}^{4}(N-2)}{2\pi}\left[1-\left(\frac{\lambda_{1}^{2}n}{4\pi}\right)^{2}\right]
+\]
+
+\end_inset
+
+We need the particular case of 
+\begin_inset Formula $N=4$
+\end_inset
+
+ corresponding to the target space being 
+\begin_inset Formula $S^{3}\approx SU(2)$
+\end_inset
+
+.
+ Thus in our limit 
+\begin_inset Formula $n\to\infty$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda_{1}\to0$
+\end_inset
+
+ keeping 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ fixed,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{d\lambda}{d\log\Lambda}=\frac{\lambda^{4}}{4\pi}
+\]
+
+\end_inset
+
+It is useful to take this limit rather than calculating loop corrections
+ from scratch, as the renormalization group evolution of the WZW has been
+ studied to high order 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bos,Xi"
+
+\end_inset
+
+.
+ Including these higher order terms does not alter the short-distance divergence
+ of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Duality with the principal chiral model
+\end_layout
+
+\begin_layout Standard
+We have now seen that 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+ is strongly coupled in the short-distance limit.
+ Yet, as a classical field theory, this can be viewed 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Nappi"
+
+\end_inset
+
+ as a dual to the asymptotically free principal chiral model with equation
+ of motion
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\partial^{\mu}[g^{-1}\partial_{\mu}g]=0,\quad g:R^{1,1}\to SU(2).
+\]
+
+\end_inset
+
+To see this, we define the currents
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+I=\frac{1}{\lambda}\dot{\phi},\quad J=\phi'
+\]
+
+\end_inset
+
+so the equations of motion become
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\dot{J}=\lambda I',\quad\dot{I}=\lambda[I,J]+\frac{1}{\lambda}J'.\label{eq:eqmo}
+\end{equation}
+
+\end_inset
+
+We can solve the second equation with the relations
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+I=\frac{1}{\lambda^{2}}g^{-1}g',\quad J=\frac{1}{\lambda}g^{-1}\dot{g},\quad g:\mathbb{R}^{2}\to SU(2).\label{eq:dual}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then the first equation becomes
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\partial_{0}\left[g^{-1}\dot{g}\right]=\partial_{1}\left[g^{-1}g'\right]
+\]
+
+\end_inset
+
+which is the non-linear sigma model.
+ Thus, the same classical equations of motion follow from the action
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S_{2}=\int\mathcal{L}_{2}dxdt=\frac{1}{2f}\int\mathrm{Tr}\ \left\{ \left(g^{-1}\dot{g}\right)^{2}-c^{2}\left(g^{-1}g'\right)^{2}\right\} dxdt
+\]
+
+\end_inset
+
+if we identify 
+\begin_inset Formula $f=\lambda^{2}$
+\end_inset
+
+.
+ A summary of relevant correspondences in the dual models can be found at
+ the end of section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Conclusion-and-future"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Reduction to A Mechanical System 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Reduction-mech"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We will look at propagating waves of the form 
+\begin_inset Formula 
+\[
+\phi(t,x)=e^{Kx}R(t)e^{-Kx}+mKx,\quad K=\frac{i}{2}k\left(\begin{array}{cc}
+1 & 0\\
+0 & -1
+\end{array}\right)
+\]
+
+\end_inset
+
+for constants 
+\begin_inset Formula $k,m$
+\end_inset
+
+.
+ These solutions are equivariant under translations: the 
+\begin_inset Quotes eld
+\end_inset
+
+potential
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $\phi$
+\end_inset
+
+ changes by an internal rotation and a constant shift under translation,
+ while the currents only change only by the internal rotation.
+ Thus, the energy density is constant.
+ They are to be contrasted with soliton solutions, which have energy density
+ concentrated at the location of the soliton.
+ They are more analogous to the plane wave solutions of the wave equation,
+ or a Continous Wave (CW) laser beam.
+ Moreover, the currents
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+I=\frac{1}{\lambda}e^{Kx}\dot{R}e^{-Kx},\quad J=e^{Kx}\left\{ [K,R]+mK\right\} e^{-Kx}
+\]
+
+\end_inset
+
+are periodic in space with wavelength 
+\begin_inset Formula $\frac{2\pi}{k}$
+\end_inset
+
+.
+ Defining 
+\begin_inset Formula 
+\[
+L\equiv[K,R]+mK,\quad S\equiv\dot{R}+\frac{1}{\lambda}K,
+\]
+
+\end_inset
+
+We can write the equations of motion and identity (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:eqmo"
+
+\end_inset
+
+) in a symmetric form
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\dot{L}=[K,S],\quad\dot{S}=\lambda[S,L].\label{eq:eqmo_ansatz}
+\end{equation}
+
+\end_inset
+
+This new choice of variables will allow us to connect to the dual theory,
+ identify the conserved quantities and to pass to the quantum theory more
+ easily.
+\end_layout
+
+\begin_layout Subsection
+The reduced system Lagrangian
+\end_layout
+
+\begin_layout Standard
+Three conserved quantities follow immediately:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+s^{2}k^{2}\equiv\mathrm{Tr}\ S^{2},\quad C_{1}k^{2}\equiv\mathrm{Tr}SL,\quad C_{2}k^{2}\equiv\mathrm{Tr}\left[\frac{1}{2}L^{2}-\frac{1}{\lambda}KS\right].\label{conserved}
+\end{equation}
+
+\end_inset
+
+The quantity 
+\begin_inset Formula $s$
+\end_inset
+
+ will be of importance in the dual picture, while the other constants have
+ less obvious roles there.
+ Moreover, we have the identity
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathrm{Tr}KL=mk^{2}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Of the six independent variables in 
+\begin_inset Formula $S$
+\end_inset
+
+ and 
+\begin_inset Formula $L$
+\end_inset
+
+, only two remain after taking into account these four constants of motion.
+ The dynamics are described by the effective lagrangian density (dropping
+ a total time derivative and an overall factor of volume of space divided
+ by 
+\begin_inset Formula $\lambda$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathcal{L}_{1}=\mathrm{Tr}\left\{ \frac{1}{2}\dot{R}^{2}+\frac{\lambda}{3}R\left[\dot{R},\ [K,R]+mK\right]-\frac{1}{2}\left([K,R]+mK\right)^{2}\right\} \label{eq:EffectiveLagrangian}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\mathrm{Tr}\left\{ \frac{1}{2}(S-\frac{1}{\lambda}K)^{2}+\frac{\lambda}{3}R\left[S-\frac{1}{\lambda}K,\ L\right]-\frac{1}{2}L^{2}\right\} 
+\]
+
+\end_inset
+
+and hamiltonian density
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+H_{1}=\mathrm{Tr}\left[\frac{1}{2}\left(S-\frac{1}{\lambda}K\right)^{2}+\frac{1}{2}L^{2}\right],\label{eq:Ham_Ansatz}
+\end{equation}
+
+\end_inset
+
+which can also be written in terms of the constants of motion as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H_{1}=\frac{k^{2}}{2}\left[s^{2}+\frac{1}{\lambda^{2}}+2C_{2}\right].
+\]
+
+\end_inset
+
+Equivalently, we can write the Hamiltonian in terms of the original variables,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H_{1}=\mathrm{Tr}\left[\frac{1}{2}\dot{R}^{2}+\frac{1}{2}\left([K,R]+mK\right)^{2}\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Reduction to One Degree of Freedom
+\end_layout
+
+\begin_layout Standard
+It is useful to work with the first two components of 
+\begin_inset Formula $R$
+\end_inset
+
+ as a single complex variable.
+ Defining 
+\begin_inset Formula $Z=R_{1}+iR_{2}$
+\end_inset
+
+, we can write explicitly
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+L=\frac{k}{2}\left(\begin{array}{cc}
+im & \bar{Z}\\
+-Z & -im
+\end{array}\right).
+\]
+
+\end_inset
+
+To describe the third component, we define
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+u\equiv\frac{1}{k}\dot{R}_{3}-\frac{1}{\lambda},\label{eq:u_def}
+\end{equation}
+
+\end_inset
+
+allowing us to write a similarly compact expression for 
+\begin_inset Formula $S$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S=\frac{1}{2i}\left(\begin{array}{cc}
+uk & \dot{\bar{Z}}\\
+\dot{Z} & -uk
+\end{array}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The three conserved quantities (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "conserved"
+
+\end_inset
+
+) can now be written in terms of 
+\begin_inset Formula $Z$
+\end_inset
+
+ and 
+\begin_inset Formula $u$
+\end_inset
+
+ as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+s^{2}k^{2} & = & u^{2}k^{2}+|\dot{Z}|^{2}\nonumber \\
+C_{1}k^{2} & = & \frac{ik}{2}\left[\bar{Z}\dot{Z}-\dot{\bar{Z}}Z\right]-mk^{2}u\nonumber \\
+C_{2}k^{2} & = & \frac{k^{2}}{2}\left(m^{2}+\frac{2u}{\lambda}+|Z|^{2}\right).\label{eq:conserved_2}
+\end{eqnarray}
+
+\end_inset
+
+Using the identity
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(\frac{d}{dt}|Z|^{2}\right)^{2}=4|Z|^{2}|\dot{Z}|^{2}+(\dot{\bar{Z}}Z-\bar{Z}\dot{Z})^{2},
+\]
+
+\end_inset
+
+we can combine these three equations to eliminate 
+\begin_inset Formula $Z$
+\end_inset
+
+ and yield an ODE for 
+\begin_inset Formula $u(t)$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dot{u}^{2}=k^{2}\lambda^{2}\left\{ \left[2C_{2}-m^{2}-\frac{2}{\lambda}u\right](s^{2}-u^{2})-\left[mu+C_{1}\right]^{2}\right\} .
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Solution in terms of elliptic functions
+\end_layout
+
+\begin_layout Standard
+The ODE for 
+\begin_inset Formula $u(t)$
+\end_inset
+
+ describes an elliptic curve.
+ Setting 
+\begin_inset Formula $u=av+b$
+\end_inset
+
+, we can pick the constants
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a=\frac{2}{k^{2}\lambda},\quad b=\frac{C_{2}\lambda}{3}
+\]
+
+\end_inset
+
+to bring our ODE to Weierstrass normal form in terms of 
+\begin_inset Formula $v$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\dot{v}^{2}=4v^{3}-g_{2}v-g_{3}.\label{eq:weierstrass_eqn}
+\end{equation}
+
+\end_inset
+
+The somewhat unsightly expressions for 
+\begin_inset Formula $g_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $g_{3}$
+\end_inset
+
+ can be obtained by symbolic computation:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+g_{2} & = & \frac{1}{3}k^{4}\lambda^{2}\left(3C_{1}\lambda m+C_{2}^{2}\lambda^{2}+3s^{2}\right)\\
+g_{3} & = & \frac{1}{108}k^{6}\lambda^{4}\left(27C_{1}^{2}+18C_{1}C_{2}\lambda m+4C_{2}^{3}\lambda^{2}-36C_{2}s+27m^{2}s^{2}\right)
+\end{eqnarray*}
+
+\end_inset
+
+The solution to the Weierstrass differential equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:weierstrass_eqn"
+
+\end_inset
+
+) is then
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+v(t)=\wp(t+\alpha)\;\Longrightarrow\;u(t)=\frac{2}{k^{2}\lambda}\wp(t+\alpha)+\frac{C_{2}\lambda}{3},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\wp$
+\end_inset
+
+ is the Weierstrass 
+\begin_inset Formula $P$
+\end_inset
+
+-function and 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is a complex constant determined by the initial conditions.
+ We can most immediately solve for 
+\begin_inset Formula $R_{3}(t)$
+\end_inset
+
+.
+ Recalling (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:u_def"
+
+\end_inset
+
+), we have
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dot{R}_{3}=\frac{2}{k\lambda}\wp(t+\alpha)+k\left(\frac{C_{2}\lambda}{3}+\frac{1}{\lambda}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In order for to obtain a sensible solution, 
+\begin_inset Formula $\wp(t+\alpha)$
+\end_inset
+
+ must be real and bounded.
+ This requires 
+\begin_inset Formula $\mathrm{Im}(\alpha)=|\omega_{2}|,$
+\end_inset
+
+ where 
+\begin_inset Formula $\omega_{2}$
+\end_inset
+
+ is the imaginary half-period of the Weierstrass 
+\begin_inset Formula $P$
+\end_inset
+
+-function (which depends on the elliptic invariants 
+\begin_inset Formula $g_{2}$
+\end_inset
+
+, 
+\series bold
+
+\begin_inset Formula $g_{3}$
+\end_inset
+
+
+\series default
+).
+ The real part of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ merely shifts our solution in time, so we can take it to be 
+\begin_inset Formula $0$
+\end_inset
+
+ for simplicity, so that 
+\begin_inset Formula $\alpha=\omega_{2}$
+\end_inset
+
+.
+ Using the relationship
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int\wp(u)du=-\zeta(u),
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\zeta$
+\end_inset
+
+ is the Weierstrass 
+\begin_inset Formula $\zeta$
+\end_inset
+
+-function, and taking 
+\begin_inset Formula $R_{3}(0)=0$
+\end_inset
+
+ gives the solution
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R_{3}(t)=\frac{2}{k\lambda}\left[\zeta(\omega_{2})-\zeta(t+\omega_{2})\right]+\left(\frac{C_{2}\lambda}{3}+\frac{1}{\lambda}\right)kt.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The solution for the other two components is found by making the substitution
+ 
+\begin_inset Formula $Z=re^{i\theta}$
+\end_inset
+
+ in (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:conserved_2"
+
+\end_inset
+
+).
+ Writing 
+\begin_inset Formula $|Z^{2}|=r^{2}$
+\end_inset
+
+ quickly yields
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+r^{2}(t)=\frac{4}{3}C_{2}-m^{2}-\frac{4}{k^{2}\lambda^{2}}\wp(t+\omega_{2}).
+\]
+
+\end_inset
+
+Note that the choice of 
+\begin_inset Formula $\mathrm{Re}(\alpha)=0$
+\end_inset
+
+ we made earlier implies that 
+\begin_inset Formula $t=0$
+\end_inset
+
+ is a turning point of the radial variable, as 
+\begin_inset Formula $\wp'(\omega_{2})$
+\end_inset
+
+ is necessarily 
+\begin_inset Formula $0$
+\end_inset
+
+.
+ It is useful to write 
+\begin_inset Formula 
+\[
+r^{2}(t)=\frac{4}{k^{2}\lambda^{2}}[\wp(\Omega)-\wp(t+\omega_{2})],
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\[
+\wp(\Omega)=k^{2}\lambda^{2}\left(\frac{C_{2}}{3}-\frac{m^{2}}{4}\right).
+\]
+
+\end_inset
+
+Then we can use the identity
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\wp(z)-\wp(\Omega)=-\frac{\sigma(z+\Omega)\sigma(z-\Omega)}{\sigma^{2}(z)\sigma^{2}(\Omega)},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ is the Weierstrass 
+\begin_inset Formula $\sigma$
+\end_inset
+
+-function, in order to simplify a later result.
+ We obtain the solution
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+r(t)=\frac{2}{\lambda k\sigma(\Omega)}\frac{\sqrt{\sigma(t+\omega_{2}+\Omega)\sigma(t+\omega_{2}-\Omega)}}{\sigma(t+\omega_{2})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To find 
+\begin_inset Formula $\theta(t)$
+\end_inset
+
+ from (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:conserved_2"
+
+\end_inset
+
+), we substitute 
+\begin_inset Formula $(\bar{Z}Z-\bar{Z}\dot{Z})=-2ir^{2}\dot{\theta}$
+\end_inset
+
+, obtaining
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dot{\theta}=\frac{C_{3}}{r^{2}}+\frac{km\lambda}{2}=\frac{k^{2}\lambda^{2}C_{3}}{4[\wp(\Omega)-\wp(t+\omega_{2})]}+\frac{km\lambda}{2},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\[
+C_{3}=k\left[\frac{m^{3}\lambda}{2}-C_{1}-m\lambda C_{2}\right]
+\]
+
+\end_inset
+
+Using the identity
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int\frac{dz}{\wp(z)-\wp(\Omega)}=\frac{1}{\wp'(\Omega)}\left[2z\zeta(\Omega)+\log\frac{\sigma(z-\Omega)}{\sigma(z+\Omega)}\right]
+\]
+
+\end_inset
+
+and taking 
+\begin_inset Formula $\theta(0)=0$
+\end_inset
+
+, we have
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\theta(t)=\frac{k^{2}\lambda^{2}C_{3}}{4\wp'(\Omega)}\left[2t\zeta(\Omega)+\log\frac{\sigma(t+\omega_{2}-\Omega)\sigma(\omega_{2}+\Omega)}{\sigma(t+\omega_{2}+\Omega)\sigma(\omega_{2}-\Omega)}\right]+\frac{km\lambda}{2}t
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can use the Weierstrass differential equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:weierstrass_eqn"
+
+\end_inset
+
+) directly to obtain 
+\begin_inset Formula $\wp'(\Omega)=(i/2)k^{2}\lambda^{2}C_{3}$
+\end_inset
+
+, leading to a seemingly remarkable cancellation.
+ We then have the solution
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\theta(t)=\frac{1}{2i}\left[2t\zeta(\Omega)+ikm\lambda t+\log\frac{\sigma(t+\omega_{2}-\Omega)\sigma(\omega_{2}+\Omega)}{\sigma(t+\omega_{2}+\Omega)\sigma(\omega_{2}-\Omega)}\right],
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+e^{i\theta(t)}=\sqrt{\frac{\sigma(t+\omega_{2}+\Omega)\sigma(\omega_{2}-\Omega)}{\sigma(t+\omega_{2}-\Omega)\sigma(\omega_{2}+\Omega)}}\exp\left[-\left(\zeta(\Omega)+\frac{ikm\lambda}{2}\right)t\right].
+\]
+
+\end_inset
+
+Finally, a few terms cancel in the overall expression for 
+\begin_inset Formula $Z$
+\end_inset
+
+, yielding
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Z(t)=\left[\frac{2}{\lambda k\sigma(\Omega)}\sqrt{\frac{\sigma(\omega_{2}-\Omega)}{\sigma(\omega_{2}+\Omega)}}\right]\frac{\sigma(t+\omega_{2}+\Omega)}{\sigma(t+\omega_{2})}\exp\left[-\left(\zeta(\Omega)+\frac{ikm\lambda}{2}\right)t\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "49text%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../../../../Downloads/R1R2.pdf
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "49text%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../../../../Downloads/R3.pdf
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The orbit in the 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+-
+\begin_inset Formula $R_{2}$
+\end_inset
+
+ plane (left) and the evolution of 
+\begin_inset Formula $R_{3}$
+\end_inset
+
+ with time (right).
+ The sample solution is plotted for 
+\begin_inset Formula $0<t<21$
+\end_inset
+
+ and uses parameters 
+\begin_inset Formula $k=1$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda=2.4$
+\end_inset
+
+, 
+\begin_inset Formula $C_{1}=0.5$
+\end_inset
+
+, 
+\begin_inset Formula $C_{2}=1$
+\end_inset
+
+, 
+\begin_inset Formula $s=2$
+\end_inset
+
+, 
+\begin_inset Formula $m=0.5$
+\end_inset
+
+.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:orbit_plot"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A sample solution is plotted in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:orbit_plot"
+
+\end_inset
+
+.
+ We can see that, in the 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+-
+\begin_inset Formula $R_{2}$
+\end_inset
+
+ plane, the solution traces an oscillating curve in between some inner and
+ outer radius.
+ Meanwhile, the solution propagates in the 
+\begin_inset Formula $R_{3}$
+\end_inset
+
+ direction with non-uniform speed.
+ This behavior is typical over all parameter values we tested.
+\end_layout
+
+\begin_layout Section
+Mechanical Interpretation and Quantization of the Reduced Systems 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:reduced_system_quant"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The equations of motion following from the ansatz (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:eqmo_ansatz"
+
+\end_inset
+
+), defining the reduced system for 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+, can be written as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\ddot{R}=\lambda[\dot{R},[K,R]+mK]+[K,[K,R]].
+\]
+
+\end_inset
+
+These are the equations of motion of a particle in a static electromagnetic
+ field, given by (working in cylindrical polar coordinates where 
+\begin_inset Formula $R_{1}=r\cos\theta,\;R_{2}=r\sin\theta,\;z=R_{3}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vec{B}=kr\hat{\theta}+mk\hat{z},\quad\vec{E}=k^{2}r\hat{r},
+\]
+
+\end_inset
+
+which follow from the vector and scalar potentials 
+\begin_inset Formula 
+\[
+\vec{A}=\frac{\lambda k}{2}\left(mr\hat{\theta}+r^{2}\hat{z}\right),\quad V=\frac{k^{2}}{2}r^{2}.
+\]
+
+\end_inset
+
+The Hamiltonian is then
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H_{1}=\frac{1}{2}p_{r}^{2}+\frac{1}{2}\frac{\left[p_{\theta}-A_{\theta}\right]^{2}}{r^{2}}+\frac{1}{2}\left[p_{z}-A_{z}\right]^{2}+V(r).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It is clear that 
+\begin_inset Formula $p_{\theta}$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{z}$
+\end_inset
+
+ are conserved.
+ We can pass to the quantum theory as usual by finding the covariant Laplacian
+ in cylindrical co-ordinates,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{H}_{1}\psi=-\frac{\hbar^{2}}{2}\frac{1}{r}\frac{\partial}{\partial r}\left[r\frac{\partial\psi}{\partial r}\right]+\frac{1}{2r^{2}}\left[-i\hbar\partial_{\theta}-A_{\theta}\right]^{2}\psi+\frac{1}{2}\left[-i\hbar\partial_{z}-A_{z}\right]^{2}\psi+V(r)\psi.
+\]
+
+\end_inset
+
+The conservation of 
+\begin_inset Formula $p_{\theta},\;p_{z}$
+\end_inset
+
+ leads us to seek a solution to the Schrodinger equation of the separable
+ form
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\psi(r,\theta,z)=\frac{1}{\sqrt{r}}\rho(r)e^{il\theta}e^{i\frac{p_{z}z}{\hbar}}
+\]
+
+\end_inset
+
+for integer 
+\begin_inset Formula $l=\frac{p_{\theta}}{\hbar}$
+\end_inset
+
+.
+ The system is then reduced to a one-dimensional Schrodinger equation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-\frac{\hbar^{2}\rho''(r)}{2}+U(r)\rho(r)=E\rho(r)
+\]
+
+\end_inset
+
+with effective potential
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+U(r)=-\frac{\hbar^{2}}{8r^{2}}+\frac{1}{2}\frac{\left[\hbar l-A_{\theta}\right]^{2}}{r^{2}}+\frac{1}{2}\left[p_{z}-A_{z}\right]^{2}+V(r)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\frac{1}{2}\left[\frac{\hbar^{2}\left[l^{2}-\frac{1}{4}\right]}{r^{2}}-\frac{\hbar k\lambda ml}{r}+\left(\frac{k^{2}\lambda^{2}m^{2}}{4}+p_{z}^{2}\right)+(k-\lambda p_{z})kr^{2}+\frac{\lambda^{2}k^{2}r^{4}}{4}\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+At low coupling 
+\begin_inset Formula $(\lambda\rightarrow0)$
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\[
+-\rho''+\left\{ \frac{\hbar^{2}\left[l^{2}-\frac{1}{4}\right]}{r^{2}}+p_{z}^{2}+\frac{k^{2}}{2}r^{2}\right\} \rho=E\rho,
+\]
+
+\end_inset
+
+and we see by dimensional analysis
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+[k]=1/L^{2}\quad\Rightarrow E\sim|k|.
+\]
+
+\end_inset
+
+These are weakly coupled massless excitations.
+ But in the high coupling limit 
+\begin_inset Formula $(\lambda\rightarrow\infty)$
+\end_inset
+
+, we have
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-\rho''+\left\{ \frac{k^{2}\lambda^{2}}{4}(m^{2}+r^{4})\right\} \rho=E\rho,
+\]
+
+\end_inset
+
+which yields a much more peculiar spectrum 
+\begin_inset Formula 
+\[
+[k^{2}\lambda^{2}]=1/L^{6}\quad\Rightarrow E\sim|\lambda k|^{1/3}.
+\]
+
+\end_inset
+
+If this dispersion relation describes some fundamental constituents of the
+ theory, then they are certainly not particles in the traditional sense.
+ We propose that this may be a glimpse of some post-relativistic constituents
+ as mentioned in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Relation-to-Slow"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+quantization of the dual reduced system
+\end_layout
+
+\begin_layout Standard
+In the dual picture (nonlinear sigma model), our ansatz picks out a class
+ of solutions that correspond to a different mechanical system.
+ Though the equations of motion in each picture can be mapped to one another
+ via the duality, the correspondence is not immediately obvious, and the
+ systems will appear very different upon quantization.
+\end_layout
+
+\begin_layout Standard
+After the ansatz, the duality relations (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:dual"
+
+\end_inset
+
+) read 
+\begin_inset Formula 
+\[
+g^{-1}g'=\lambda e^{Kx}\left(S+\frac{1}{\lambda}K\right)e^{-Kx},\quad g^{-1}\dot{g}=\lambda e^{Kx}Le^{-Kx}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Writing 
+\begin_inset Formula $g=h(t,x)e^{-Kx}$
+\end_inset
+
+ yields 
+\begin_inset Formula 
+\[
+h^{-1}h'=\lambda S\quad h^{-1}\dot{h}=\lambda L.
+\]
+
+\end_inset
+
+We further suppose that 
+\begin_inset Formula $h$
+\end_inset
+
+ is separable as 
+\begin_inset Formula $h(t,x)=F(x)Q(t)$
+\end_inset
+
+.
+ Then the equation for 
+\begin_inset Formula $S$
+\end_inset
+
+ can be separated as 
+\begin_inset Formula 
+\begin{equation}
+F^{-1}(x)F'(x)=\lambda Q(t)S(t)Q^{-1}(t)\label{eq:sep}
+\end{equation}
+
+\end_inset
+
+Both sides are equal to some constant traceless matrix 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $Q(t)$
+\end_inset
+
+ is only unique up to multiplication on the left by a constant matrix in
+ 
+\begin_inset Formula $\mathbb{SU}(2)$
+\end_inset
+
+, we can use this to choose 
+\begin_inset Formula $C$
+\end_inset
+
+ to be diagonal and thus proportional to 
+\begin_inset Formula $K$
+\end_inset
+
+.
+ We then have
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Q(t)S(t)Q^{-1}(t)=sK,
+\]
+
+\end_inset
+
+implying that 
+\begin_inset Formula $\mathrm{Tr}S^{2}=s^{2}k^{2}.$
+\end_inset
+
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:sep"
+
+\end_inset
+
+) is satisfied if 
+\begin_inset Formula 
+\[
+F(x)=e^{\lambda sKx}.
+\]
+
+\end_inset
+
+Thus, the full corresponding ansatz for the field variable in the dual theory
+ is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+g(t,x)=e^{\lambda sKx}Q(t)e^{-Kx},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $Q$
+\end_inset
+
+ is related to the previous variables by
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S=sQ^{-1}(t)KQ(t),\quad L=\frac{1}{\lambda}Q^{-1}\dot{Q}.
+\]
+
+\end_inset
+
+The dual Lagrangian can now be written as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathcal{L}_{2}=\frac{1}{2f^{2}}\mathrm{Tr}\left[\left(Q^{-1}\dot{Q}\right)^{2}-\left(\lambda sQ^{-1}KQ-K\right)^{2}\right].
+\]
+
+\end_inset
+
+It is useful to parameterize 
+\begin_inset Formula $Q$
+\end_inset
+
+ in terms of the Euler angles: 
+\begin_inset Formula 
+\[
+Q=e^{\frac{i}{2}\sigma_{3}\gamma}e^{\frac{i}{2}\sigma_{1}\beta}e^{\frac{i}{2}\sigma_{3}\alpha}.
+\]
+
+\end_inset
+
+The traces in 
+\begin_inset Formula $\mathcal{L}_{2}$
+\end_inset
+
+ can then be computed directly, yielding
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathcal{L}_{2}=\frac{1}{\lambda^{2}}\left\{ \frac{\dot{\alpha}^{2}+\dot{\beta}^{2}+\dot{\gamma}^{2}}{2}+\cos\beta\dot{\alpha}\dot{\gamma}-V(\beta)\right\} 
+\]
+
+\end_inset
+
+where (dropping a constant shift)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+V(\beta)=-2k^{2}\lambda s\cos\beta.
+\]
+
+\end_inset
+
+As a mechanical system, this is the well known spinning top (isotropic Lagrange
+ top).
+ It is instructive to write
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathcal{L}_{2}=\frac{1}{\lambda^{2}}\left[\frac{1}{2}g_{ij}\dot{\alpha}^{i}\dot{\alpha}^{j}-V\right]
+\]
+
+\end_inset
+
+where
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+g_{ij}=\left(\begin{array}{ccc}
+1 & 0 & \cos\beta\\
+0 & 1 & 0\\
+\cos\beta & 0 & 1
+\end{array}\right)
+\]
+
+\end_inset
+
+is the metric of the rotation group and 
+\begin_inset Formula $V$
+\end_inset
+
+ is the gravitational potential of the top.
+ The overall constant 
+\begin_inset Formula $\frac{1}{\lambda^{2}}$
+\end_inset
+
+ in the action leads to a rescaling of 
+\begin_inset Formula $\hbar\mapsto\hbar\lambda^{2}$
+\end_inset
+
+ upon quantization.
+\end_layout
+
+\begin_layout Standard
+To pass to the quantum theory, we find the Laplacian operator with respect
+ to the metric 
+\begin_inset Formula $g$
+\end_inset
+
+ of Eulerian coordinates, 
+\begin_inset Formula 
+\[
+\nabla^{2}\psi=\frac{1}{\sqrt{g}}\partial_{i}\left[\sqrt{g}g^{ij}\partial_{j}\psi\right]
+\]
+
+\end_inset
+
+The Hamiltonian is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{H}_{2}=-\frac{\hbar^{2}\lambda^{4}}{2}\nabla^{2}\psi+V\psi
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=-\frac{\hbar^{2}\lambda^{4}}{2}\left[\frac{\partial_{\alpha}^{2}+\partial_{\gamma}^{2}-2\cos\beta\ \partial_{\alpha}\partial_{\gamma}}{\sin^{2}\beta}+\partial_{\beta}^{2}+\cot\beta\partial_{\beta}\psi\right]+V\psi
+\]
+
+\end_inset
+
+We can again reduce the Schrodinger equation 
+\begin_inset Formula $\hat{H}_{2}\psi=E\psi$
+\end_inset
+
+ to a one-dimensional Schrodinger equation with the ansatz 
+\begin_inset Formula 
+\[
+\psi(\alpha,\gamma,\beta)=e^{im_{\alpha}\alpha}e^{im_{\gamma}\gamma}\frac{B(\beta)}{\sqrt{\sin\beta}}
+\]
+
+\end_inset
+
+The system is then reduced to a one-dimensional Schrodinger equation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-\hbar^{2}\lambda^{4}\frac{B''(\beta)}{2}+U(\beta)B(\beta)=EB(\beta)
+\]
+
+\end_inset
+
+where
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+U(\beta)=-\frac{\hbar^{2}\lambda^{4}}{8}+\frac{\hbar^{2}\lambda^{4}}{2\sin^{2}\beta}\left[m_{\alpha}{}^{2}+m_{\gamma}^{2}-2m_{\alpha}m_{\gamma}\cos\beta-\frac{1}{4}\right]-2k^{2}\lambda s\cos\beta.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This can be studied by standard techniques for periodic potentials ( Floquet
+ theory or Bloch waves etc.) We content ourselves with a quick look at low
+ energy excitations: small oscillations around the classical equilibrium
+ 
+\begin_inset Formula $q=0$
+\end_inset
+
+ and setting 
+\begin_inset Formula $m_{\alpha}=0=m_{\gamma}$
+\end_inset
+
+.
+ Changing variables 
+\begin_inset Formula $\beta=\hbar\lambda^{2}q$
+\end_inset
+
+ and expanding around the classical minimum 
+\begin_inset Formula $q=0$
+\end_inset
+
+ gives
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-\frac{1}{2}\frac{d^{2}B}{dq^{2}}+\left\{ q^{2}\left(\hbar^{2}k^{2}s\lambda^{5}\right)-\frac{1}{8q^{2}}-2k^{2}s\right\} B\approx EB
+\]
+
+\end_inset
+
+The solutions involve Laguerre polynomials and the spectrum is, in this
+ approximation 
+\begin_inset Formula $E_{n}\approx\sqrt{2}(2n+1)\hbar k\sqrt{s}\lambda^{\frac{5}{2}}.$
+\end_inset
+
+ If we remove the zero-point energy ( 
+\begin_inset Formula $n=0$
+\end_inset
+
+) this is the energy of 
+\begin_inset Formula $n$
+\end_inset
+
+ free particles each of energy 
+\begin_inset Formula $e_{1}=\hbar k\sqrt{8s}\lambda^{\frac{5}{2}}$
+\end_inset
+
+ .
+ This is the dispersion relation of massless particles, except for a rescaling
+ of the speed.
+\end_layout
+
+\begin_layout Section
+Conclusion and future directions
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Conclusion-and-future"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It is difficult to say whether the 
+\begin_inset Quotes eld
+\end_inset
+
+preons
+\begin_inset Quotes erd
+\end_inset
+
+ we discuss are directly observable objects in an experiment.
+ Quarks were not considered at first to be directly observable things either,
+ as they could not be created as isolated particles.
+ In the high coupling limit, the Minkowski geometry of space-time appears
+ to be lost, and wave propagation is sustained entirely by the non-linearity.
+ However, it is possible that they transmit no information, or perhaps that
+ the 
+\begin_inset Quotes eld
+\end_inset
+
+post-relativistic
+\begin_inset Quotes erd
+\end_inset
+
+ effects they demonstrate are subject to some sort of confinement when they
+ form bound states.
+ 
+\end_layout
+
+\begin_layout Standard
+It is at least intriguing to question whether highly coupled theories have
+ fundamental constituents whose nature is so exotic that they have been
+ overlooked.
+ Drawing paralells with 
+\begin_inset Formula $\lambda\phi^{4}$
+\end_inset
+
+ theory, it is tempting to speculate that the Higgs particle of the standard
+ model is such a composite of some strongly bound preons existing only at
+ short distances.
+ Were this the case, one could sensibly describe the 
+\begin_inset Quotes eld
+\end_inset
+
+naked Higgs
+\begin_inset Quotes erd
+\end_inset
+
+ at short distances without requiring fermionic channels be present.
+\end_layout
+
+\begin_layout Standard
+For a more complete understanding, we must quantize the whole theory rather
+ than just its mechanical reduction.
+ Since the equations have a Lax pair, it should be possible to perform a
+ canonical transformation to angle-variables and then pass to the quantum
+ theory.
+ Such a quantization was achieved for sine-Gordon theory 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "QuantThSolitons"
+
+\end_inset
+
+, proving that the solitons are fermions which bind to form the scalar waves.
+ A similar analysis of our model is a lengthy endeavor, and we hope to return
+ to this later after laying the groundwork and motivation here.
+ 
+\end_layout
+
+\begin_layout Standard
+A table is included below to summarize our work in a way that emphasizes
+ the dual correspondence.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset VSpace 12pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="16" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nilpotent Field Theory (
+\begin_inset Formula $S_{1}$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Principal Chiral Model (
+\begin_inset Formula $S_{2}$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathcal{L}_{1}=\mathrm{Tr}\left\{ \frac{1}{2\lambda}\dot{\phi}^{2}-\frac{1}{2\lambda}\phi'^{2}+\frac{1}{3}\phi[\dot{\phi},\phi']\right\} $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Lagrangian density 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathcal{L}_{2}=\frac{1}{2\lambda^{2}}\mathrm{Tr}\left\{ (g^{-1}\dot{g})^{2}-(g^{-1}g')^{2}\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $I=\frac{1}{\lambda}\dot{\phi},\quad J=\phi'$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Currents 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $I=g^{-1}g',\quad J=g^{-1}\dot{g}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\lambda I'=\dot{J}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Current Identity 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\dot{I}-\frac{1}{\lambda}J'+\lambda\left[J,I\right]=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\dot{I}-\frac{1}{\lambda}J'+\lambda\left[J,I\right]=0$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Equation of Motion 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\lambda I'=\dot{J}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Reduced System of 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Reduced System of 
+\begin_inset Formula $S_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi(t,x)=e^{Kx}R(t)e^{-Kx}+mKx$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Wave Ansatz 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $g(t,x)=e^{\lambda sKx}Q(t)e^{-Kx}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $I=e^{Kx}\dot{R}e^{-Kx},\quad$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Wave Currents 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $I=e^{Kx}\left\{ \lambda sQ^{-1}KQ-K\right\} e^{-Kx},$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $J=e^{Kx}\left\{ \lambda[K,R]+mK\right\} e^{-Kx}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $J=e^{Kx}\left\{ Q^{-1}\dot{Q}\right\} e^{-Kx}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $S=\dot{R}+\frac{1}{\lambda}K$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Common Variables 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $S=sQ^{-1}KQ$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $L=[K,R]+mK$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $L=\frac{1}{\lambda}Q^{-1}\dot{Q}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\dot{L}=[K,S]$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Current Identity 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\dot{S}=\lambda[S,L]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\dot{S}=\lambda[S,L]$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Eqn.
+ of motion 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\dot{L}=[K,S]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $H_{1}=\mathrm{Tr}\left\{ \frac{1}{2}\left(S-\frac{1}{\lambda}K\right)^{2}+\frac{1}{2}L^{2}\right\} $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Hamiltonian 
+\begin_inset Formula $H_{1}=H_{2}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $H_{2}=\mathrm{Tr}\left\{ \frac{1}{2}\left(S-\frac{1}{\lambda}K\right)^{2}+\frac{1}{2}L^{2}\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathcal{L}_{1}=\mathrm{Tr}\left\{ \frac{1}{2}\left(S-\frac{1}{\lambda}K\right)^{2}+\frac{1}{3}R\left[S-K,L\right]-\frac{1}{2}L^{2}\right\} $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Lagrangian 
+\begin_inset Formula $\mathcal{L}_{1}\neq\mathcal{L}_{2}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathcal{L}_{2}=\frac{1}{2}\mathrm{Tr}\left\{ L^{2}-\left(S-K\right)^{2}\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $E\sim|k|^{1/3}\quad(\lambda\rightarrow\infty)$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+short-range dispersion 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $E\sim|k|\quad(\lambda\rightarrow0)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset VSpace 12pt
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\start_of_appendix
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%dummy comment inserted by tex2lyx to ensure that this paragraph is not
+ empty
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%dummy comment inserted by tex2lyx to ensure that this paragraph is not
+ empty
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+quadratic hamiltonians with nilpotent bracket algebras 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Appendix:nilpotent"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Many classical systems have Poisson brackets (or commutators in the quantum
+ case) which generate a Lie algebra with a quadratic Hamiltonian: 
+\begin_inset Formula 
+\[
+H=\frac{1}{2}h^{ab}v_{a}v_{b}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\{ v_{a},v_{b}\right\} =c_{ab}^{c}v_{c}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Where 
+\begin_inset Formula $c_{ab}^{c}$
+\end_inset
+
+ are the structure constants of the bracket algebra and 
+\begin_inset Formula $v_{a}$
+\end_inset
+
+ the dynamical variables.
+ The quadratic nature of the Hamiltonian immediately affords a geometric
+ interpretation: 
+\begin_inset Formula $h_{ab}$
+\end_inset
+
+ defines a left-invariant metric, 
+\begin_inset Formula $h\in\underline{G}\vee\underline{G}$
+\end_inset
+
+ on the Lie group 
+\begin_inset Formula $\underline{G}$
+\end_inset
+
+.
+ The equations of motion then describe geodesics on the Lie group under
+ this metric.
+\end_layout
+
+\begin_layout Standard
+A nilpotent Lie Algebra of step 
+\begin_inset Formula $n$
+\end_inset
+
+ is a Lie algebra in which all repeated brackets of order 
+\begin_inset Formula $n$
+\end_inset
+
+ vanish.
+ The combination of a quadratic Hamiltonian 
+\emph on
+and 
+\emph default
+a nilpotent bracket algebra can allow one to solve for the spectrum of a
+ quantum system algebraically, using only the representation structure of
+ the associated Lie group.
+ This is done by using a representation to generate raising and lowering
+ operators, as is familiar in the case of the harmonic oscillator.
+ While we did not take this (somewhat ambitious) approach here, it is carried
+ out in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "JorgensenKlink1"
+
+\end_inset
+
+ for a magnetic system very similar to the one we discuss in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:reduced_system_quant"
+
+\end_inset
+
+.
+ It is worth at least mentioning this point of view, as it connects the
+ model studied here to other, more well-known models.
+\end_layout
+
+\begin_layout Subsection
+Nilpotent Mechanical Systems
+\end_layout
+
+\begin_layout Standard
+The simplest system of this type is a harmonic oscillator, 
+\begin_inset Formula 
+\[
+H=\frac{1}{2}\left(p^{2}+\omega^{2}q^{2}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\{ p,q\right\} =1.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here the canonical variables 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $q$
+\end_inset
+
+ form a step-2 nilpotent Lie algebra, where all double commutators vanish.
+ Of course, any Hamiltonian in terms of the canonical variables will have
+ this bracket algebra, but what happens in the non-quadratic case? Consider
+ the anharmonic oscillator, 
+\begin_inset Formula 
+\[
+H=\frac{1}{2}\left(p^{2}+\omega^{2}q^{2}\right)+\lambda q^{4}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can recast this as a quadratic Hamiltonian with step-3 nilpotent bracket
+ algebra by defining 
+\begin_inset Formula $q_{2}=q^{2}$
+\end_inset
+
+, and then treating this as a distinct variable in the algebra.
+ We then have 
+\begin_inset Formula 
+\[
+H=\frac{1}{2}\left(p^{2}+\omega^{2}q^{2}\right)+\lambda q_{2}^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\{ p,q_{2}\right\} =2q,\quad\left\{ p,q\right\} =1,\quad\left\{ q_{2},q\right\} =0,
+\]
+
+\end_inset
+
+where one can see that all triple commutators vanish.
+ Thus, the classical anharmonic oscillator describes geodesics in the correspond
+ing nilpotent Lie group.
+ It is possible to solve such quantum theories using representations of
+ the Lie algebra (as in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "JorgensenKlink1"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+The mechanical reduction of our field theory gives another example.
+ The equations of motion (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:eqmo_ansatz"
+
+\end_inset
+
+) follow from the hamiltonian (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Ham_Ansatz"
+
+\end_inset
+
+) with Poisson Brackets
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\{ S_{a},S_{b}\right\} =\lambda\epsilon_{abc}L_{c},\quad\left\{ L_{a},L_{b}\right\} =0,\quad\left\{ S_{a},L_{b}\right\} =\epsilon_{abc}K_{c}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This a step three nilpotent Lie algebra.
+ Its on the space of functions of 
+\begin_inset Formula $R$
+\end_inset
+
+ is what we used to quantize the theory.
+ In the dual picture the Poisson brackets would not be nilpotent: the Lie
+ algebra it is the semi-direct product of 
+\begin_inset Formula $SU(2)$
+\end_inset
+
+ with an abelian algebra.
+\end_layout
+
+\begin_layout Subsection
+Nilpotent Field Theories
+\end_layout
+
+\begin_layout Standard
+Interestingly, we find that some of the most important field theories of
+ particle physics can be described in this way.
+ The bosonic part of the standard model consists of Yang-Mills theory coupled
+ to a Higgs sector described as a 
+\begin_inset Formula $\lambda\phi^{4}$
+\end_inset
+
+ scalar field theory.
+\end_layout
+
+\begin_layout Standard
+In field theory, the obvious analogue of the anharmonic oscillator is pure
+ 
+\begin_inset Formula $\lambda\phi^{4}$
+\end_inset
+
+ theory.
+ Identifying 
+\begin_inset Formula $\phi_{2}(x)=\phi^{2}(x)$
+\end_inset
+
+, this theory can be described by
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H=\frac{1}{2}\int\left[\pi^{2}(x)+m^{2}\phi^{2}(x)+\lambda\phi_{2}^{2}\right]dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\{ \pi(x),\phi_{2}(y)\right\} =2\phi(x)\delta(x-y),\quad\left\{ \pi(x),\phi(y)\right\} =\delta(x-y)
+\]
+
+\end_inset
+
+Pure 
+\begin_inset Formula $\lambda\phi^{4}$
+\end_inset
+
+ theory (without coupling to fermions) in 4 dimensions remains intractable
+ in the short distance limit: is not an asymptotically free theory.
+ We see here that it follows from a Hamiltonian with one degree of extra
+ nilpotency in the bracket algebra.
+ This suggests that perhaps the theory is easier tamed with an algebraic
+ approach.
+\end_layout
+
+\begin_layout Standard
+Another famously puzzling theory, Yang-Mills theory, can be cast in the
+ same language.
+ Here the Poisson Brackets and Hamiltonian are best expressed in terms of
+ the electric field
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+E[a]=\int E^{bi}a_{bi}dx
+\]
+
+\end_inset
+
+(where 
+\begin_inset Formula $a$
+\end_inset
+
+ is a smooth test function) and the magnetic field 
+\begin_inset Formula $B=dA+A\wedge A$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\{E[a],B\}=da+[A,a],\quad\{E[a],A\}=a,\quad\{A_{a}(x)_{,}A_{bj}(y)\}=0,\quad H=\frac{1}{2}\int\left(E^{2}+B^{2}\right)dx.
+\]
+
+\end_inset
+
+Yang Mills theory, however, is an asymptotically free theory.
+ The fact that it can be brought to the same form as pure 
+\begin_inset Formula $\lambda\phi^{4}$
+\end_inset
+
+ theory suggests some commonality in structure of the two theories, though
+ they might appear glaringly different due to their short-distance behavior.
+\end_layout
+
+\begin_layout Standard
+We pause to note that not all systems are nilpotent.
+ The simplest example would be the rigid rotor, whose bracket algebra is
+ that of angular momentum, where repeated commutators do not vanish.
+ Such a Lie algebra is perhaps misleadingly labeled as 
+\emph on
+simple
+\emph default
+ in the mathematics literature.
+ Also, the Euler equations of an ideal fluid can be formulated with a quadratic
+ hamiltonian on the Lie algebra of vector fields.
+ Nilpotent Lie algebras could be useful as approximations here.
+\end_layout
+
+\begin_layout Subsection
+The current algebra of 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The equations of motion (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:eqmo"
+
+\end_inset
+
+) follow from the hamiltonian
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H_{1}=\frac{1}{2}\int[\lambda I_{a}I_{a}+\frac{1}{\lambda}J^{a}J^{a}]dx
+\]
+
+\end_inset
+
+and the Poisson brackets from 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\{J^{a}(x),\ J^{b}(y)\}_{1}=0,\quad\{I_{a}(x),\ J^{b}(y)\}_{1}=-\delta_{a}^{b}\delta'(x-y)\quad\{I_{a}(x),\ I_{b}(y)\}_{1}=\epsilon_{abc}J_{c}\delta(x-y).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So this theory can also be cast as a quadratic Hamiltonian with step-3 nilpotent
+ algebra.
+ This further motivates the analogy between our model and 
+\begin_inset Formula $\lambda\phi^{4}$
+\end_inset
+
+ theories.
+\end_layout
+
+\begin_layout Subsection
+Strong Coupling Limit
+\end_layout
+
+\begin_layout Standard
+It is natural, in nilpotent Lie algebras, to take the singular limit of
+ the metric where the coefficient of the higher step generators shrink to
+ zero.
+ (This geometry has been well-studied in the simplest case of the Heisenberg
+ group
+\begin_inset CommandInset citation
+LatexCommand cite
+key "subRiemannian"
+
+\end_inset
+
+).
+ This is precisely the strong coupling limit 
+\begin_inset Formula $\lambda\to\infty$
+\end_inset
+
+ of our theory: the second term in the hamiltonian 
+\begin_inset Formula $\frac{1}{2}\int[\lambda I_{a}I_{a}+\frac{1}{\lambda}J^{a}J^{a}]dx$
+\end_inset
+
+ tends to zero.
+ In this limit the co-metric is not invertible.
+ The resulting sub-Riemannian geometry still has well-defined geodesics.
+ This is the geometric meaning of the strongly coupled limit (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:StrongCouplingEqn"
+
+\end_inset
+
+).
+ The length of these geodesics still define a metric (e.g., satisfying the
+ triangle inequality) on the nilpotent Lie group.
+ It would be interesting to look at the strong coupling limits of the other
+ examples of nilpotent field theories from this geometric point of view.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Nappi"
+
+\end_inset
+
+8 (1980); C.
+ R.
+ Nappi and E.
+ Witten, Phys.Rev.Lett.71:3751-3753,1993[arxiv:hep-th/9310112
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "CurtrightZachos"
+
+\end_inset
+
+ T.
+ Curtright And C.
+ Zachos Phys Rev D49, 5408 (1994).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "PCM"
+
+\end_inset
+
+E.
+ Ogievetski, N.
+ Y.
+ Reshetikhin and P.
+ B.
+ Wiegmann, Nucl.
+ Phys.
+ B280, 45 (1987)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "sineGordon"
+
+\end_inset
+
+S.
+ Coleman Phys.
+ Rev.
+ D 11, 2088 (1975)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Witten"
+
+\end_inset
+
+ E.
+ Witten, Comm.
+ Math.
+ Phys.
+ 92, 455 (1984).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "SigmaModelString"
+
+\end_inset
+
+Callan C G, Friedan D, Martinec E J, Perry M J (1985), Strings in background
+ fields, Nucl.
+ Phys.
+ B262, 593
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Bos"
+
+\end_inset
+
+M.
+ Bos Phys.
+ Lett.
+ B189, 435 (1987)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Xi"
+
+\end_inset
+
+Z.-M Xi Nucl.
+ Phys.
+ B314, 112 (1989)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "PolyakovWiegmann"
+
+\end_inset
+
+ P.
+ B.
+ Wiegmann Phys.
+ Lett.
+ B141(1984) 217; A.
+ M.
+ Polyakov and P.
+ B.
+ Wiegmann Phys.
+ Lett.
+ B141(1984) 223.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "SlowLight"
+
+\end_inset
+
+ J.
+ E.
+ Heebner, RW.
+ Boyd and Q-H.
+ Park, Phys.
+ Rev.
+ E 65 036619
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "QuantThSolitons"
+
+\end_inset
+
+L.D.
+ Faddeev and V.E.
+ Korepin, Phys.
+ Rep.
+ 42, 1-87 (1978)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "JorgensenKlink1"
+
+\end_inset
+
+P.
+ E.
+ T.
+ Jorgensen and W.
+ H.
+ Klink, Publ.
+ RIMS, Kyoto, 21,960-99(1985).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "subRiemannian"
+
+\end_inset
+
+R.
+ Montgomery, 
+\emph on
+A Tour of Subriemannian Geometries, Their Geodesics and Applications , 
+\emph default
+American Mathematical Society, (2006)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "ShapereWilczek"
+
+\end_inset
+
+A.
+ Shapere and F.
+ Wilczek, Phys.
+ Rev.
+ Lett.
+ 58, 2051(1987).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Hormander"
+
+\end_inset
+
+ L.
+ Hormander, Acta.
+ Math., 119, 147-171, (1967)
+\end_layout
+
+\end_body
+\end_document
